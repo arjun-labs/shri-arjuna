@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shri Arjuna — हर सवाल का एक नज़रिया</title>
 <meta name="description" content="Astrology, Vastu, Life Guidance और Business consultation — Phone, Google Meet या आमने-सामने मुलाक़ात। भुगतान पहले, फिर consultation।">
-<link rel="icon" href="assets/avatar.jpg">
+<link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
@@ -122,7 +122,12 @@ footer .contact{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;color:va
 .legal{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:14px}
 .legal a{color:var(--muted2)}
 .disclaimer{margin:0;font-size:13px;color:var(--muted2)}
-@media (max-width:640px){
+.lang{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:4px;padding:5px;border-radius:999px;background:rgba(10,16,30,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18)}
+.lang button{font:inherit;font-size:13px;font-weight:500;min-width:44px;min-height:44px;border-radius:999px;border:0;background:transparent;color:#DCE9F6;cursor:pointer}
+.lang button[aria-pressed=true]{background:#fff;color:#0B1A2E}
+.dawn .sil{display:block;margin:-170px auto 0;width:min(230px,52vw);height:auto;position:relative}
+@media (max-width:640px){.lang{top:auto;bottom:16px;transform:none;flex-direction:row}
+
   .hero{min-height:860px;background-position:center 66%}
   .panel .body{padding:28px 24px}
   .dawn p{font-size:24px;padding:70px 24px 170px}
@@ -132,22 +137,23 @@ footer .contact{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;color:va
 </head>
 <body>
 
+<div class="lang" role="group" aria-label="Language / भाषा"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="hi" aria-pressed="false">हिं</button><button type="button" data-lang="mr" aria-pressed="false">मरा</button></div>
 <header class="hero" id="top">
   <div class="swirl-clip" aria-hidden="true"><div class="swirl"><img src="assets/swirl.png" alt=""></div></div>
   <div class="wrap nav">
-    <a class="brand" href="#top"><span class="avatar"><img src="assets/avatar.jpg" alt="Shri Arjuna"></span><span>Shri Arjuna</span></a>
+    <a class="brand" href="#top"><span class="avatar"><img src="assets/logo_avatar.jpg" alt="Shri Arjuna"></span><span>Shri Arjuna</span></a>
     <nav aria-label="मुख्य">
-      <a href="#choose">सवाल चुनें</a>
-      <a href="#how">प्रक्रिया</a>
-      <a href="#book">शुल्क</a>
-      <a class="btn btn-light" href="#book">बात करें</a>
+      <a href="#choose"><span data-i18n="nav_choose">सवाल चुनें</span></a>
+      <a href="#how"><span data-i18n="nav_how">प्रक्रिया</span></a>
+      <a href="#book"><span data-i18n="nav_fees">शुल्क</span></a>
+      <a class="btn btn-light" href="#book"><span data-i18n="nav_talk">बात करें</span></a>
     </nav>
   </div>
   <div class="hero-copy">
-    <p class="eyebrow">रुकिए · साँस लीजिए</p>
-    <h1>हर सवाल का एक नज़रिया।<br>हर उलझन का एक रास्ता।</h1>
+    <p class="eyebrow"><span data-i18n="eyebrow">रुकिए · साँस लीजिए</span></p>
+    <h1 data-i18n-html="h1">हर सवाल का एक नज़रिया।<br>हर उलझन का एक रास्ता।</h1>
     <div class="row" style="padding-top:8px">
-      <a class="btn btn-light" href="#choose">अपना सवाल चुनें</a>
+      <a class="btn btn-light" href="#choose"><span data-i18n="btn_choose">अपना सवाल चुनें</span></a>
       <a class="btn btn-ghost" href="https://wa.me/919076037003" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
@@ -165,7 +171,7 @@ footer .contact{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;color:va
   <div class="wrap inner">
     <div class="center">
       <svg width="120" height="20" viewBox="0 0 120 20" aria-hidden="true"><path d="M2 10q10-8 20 0t20 0t20 0t20 0t20 0t16 0" fill="none" stroke="#4A6684" stroke-width="1.4" stroke-linecap="round"/></svg>
-      <h2 style="color:#fff">आज मन में क्या है?</h2>
+      <h2 style="color:#fff"><span data-i18n="choose_h2">आज मन में क्या है?</span></h2>
     </div>
     <div class="tiles" id="tiles">
       <button type="button" class="tile" data-id="astro" aria-pressed="false"><span class="art"><svg class="rings" width="124" height="124" viewBox="0 0 124 124" aria-hidden="true"><circle cx="62" cy="62" r="60" fill="none" stroke="#fff" stroke-opacity=".10"/><circle cx="62" cy="62" r="44" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".08"/></svg><svg class="icon" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="24" stroke-dasharray="2 5"/><path d="M37 17a14 14 0 1 0 10 23 12 12 0 0 1-10-23z"/><path d="M17 14l1.6 3.4 3.4 1.6-3.4 1.6-1.6 3.4-1.6-3.4-3.4-1.6 3.4-1.6z"/><path d="M49 45l1 2.2 2.2 1-2.2 1-1 2.2-1-2.2-2.2-1 2.2-1z"/><path d="M14 44h.01M52 20h.01"/></svg></span><span class="txt"><span class="nm">Astrology</span><span class="hi">ज्योतिष</span></span></button>
@@ -200,8 +206,8 @@ footer .contact{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;color:va
         <p class="hook" id="pHook"></p>
         <div class="chips" id="pFits"></div>
         <div class="row" style="justify-content:flex-start;align-items:center;gap:14px;padding-top:6px">
-          <a class="btn btn-light" href="#book">बात शुरू करें</a>
-          <span class="fee">Phone ₹500 (25 मिनट) · Meet ₹700 · मुलाक़ात ₹2,000 (55 मिनट)</span>
+          <a class="btn btn-light" href="#book"><span data-i18n="panel_cta">बात शुरू करें</span></a>
+          <span class="fee"><span data-i18n="panel_fee">Phone ₹500 (25 मिनट) · Meet ₹700 · मुलाक़ात ₹2,000 (55 मिनट)</span></span>
         </div>
         <p class="note" id="pNote"></p>
       </div>
@@ -209,19 +215,19 @@ footer .contact{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;color:va
   </div>
 </section>
 
-<section class="dawn"><p>हर रात के बाद, सुबह।</p></section>
+<section class="dawn"><p><span data-i18n="dawn">हर रात के बाद, सुबह।</span></p><img class="sil" src="assets/sil_navy.png" alt="" aria-hidden="true"></section>
 
 <section class="how" id="how">
   <div class="orbit-clip" aria-hidden="true"><div class="orbit light"></div></div>
   <div class="wrap inner">
-    <h2 style="text-align:center">चार कदम</h2>
+    <h2 style="text-align:center"><span data-i18n="how_h2">चार कदम</span></h2>
     <div class="steps">
       <svg class="path" viewBox="0 0 1112 100" preserveAspectRatio="none" aria-hidden="true"><path d="M60 50C200 0 300 100 420 50S640 0 690 50S920 100 1050 50" fill="none" stroke="#C9DBEA" stroke-width="1.6" stroke-dasharray="2 9" stroke-linecap="round"/></svg>
       <div class="grid">
-        <div class="step"><span class="ic"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M10 9a2 2 0 1 1 2.5 2c-.5.2-.5.6-.5 1"/><path d="M12 14h.01"/></svg></span><h3>सवाल चुनें</h3></div>
-        <div class="step"><span class="ic"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><h3>Phone, Meet या मुलाक़ात चुनें</h3></div>
-        <div class="step"><span class="ic"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M10 15l1.5 1.5L15 13"/></svg></span><h3>समय चुनें और भुगतान करें</h3></div>
-        <div class="step"><span class="ic" style="background-color:#EEF4FA"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18"/><path d="M7 18a5 5 0 0 1 10 0"/><path d="M12 6v3M5 11l2 1M19 11l-2 1M8 21h8"/></svg></span><h3>आगे का रास्ता समझें</h3></div>
+        <div class="step"><span class="ic"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M10 9a2 2 0 1 1 2.5 2c-.5.2-.5.6-.5 1"/><path d="M12 14h.01"/></svg></span><h3 data-i18n="s1">सवाल चुनें</h3></div>
+        <div class="step"><span class="ic"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><h3 data-i18n="s2">Phone, Meet या मुलाक़ात चुनें</h3></div>
+        <div class="step"><span class="ic"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M10 15l1.5 1.5L15 13"/></svg></span><h3 data-i18n="s3">समय चुनें और भुगतान करें</h3></div>
+        <div class="step"><span class="ic" style="background-color:#EEF4FA"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18"/><path d="M7 18a5 5 0 0 1 10 0"/><path d="M12 6v3M5 11l2 1M19 11l-2 1M8 21h8"/></svg></span><h3 data-i18n="s4">आगे का रास्ता समझें</h3></div>
       </div>
     </div>
   </div>
@@ -230,23 +236,23 @@ footer .contact{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;color:va
 <section class="fees tex-grain" id="book">
   <div class="orbit-clip" aria-hidden="true"><div class="orbit light"></div></div>
   <div class="wrap inner">
-    <h2 style="text-align:center">बात करने के तीन तरीके</h2>
+    <h2 style="text-align:center"><span data-i18n="fees_h2">बात करने के तीन तरीके</span></h2>
     <div class="cards">
-      <div class="card"><div class="art"><svg class="rings" width="130" height="130" viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="72" fill="none" stroke="#DAE6F0"/><circle cx="75" cy="75" r="52" fill="#fff"/></svg><svg class="icon" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/><path d="M15 3a6 6 0 0 1 6 6M15 6.5a2.5 2.5 0 0 1 2.5 2.5"/></svg></div><div class="body"><span class="lbl">Phone</span><span class="price">₹500 <small>/ session</small></span><span class="sub">अधिकतम 25 मिनट · आप जहाँ भी हों</span><span class="spacer"></span><a class="btn btn-accent" data-book="phone" href="#">Phone booking करें</a></div></div>
-      <div class="card"><div class="art"><svg class="rings" width="130" height="130" viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="72" fill="none" stroke="#DAE6F0"/><circle cx="75" cy="75" r="52" fill="#fff"/></svg><svg class="icon" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="2"/><path d="M15.5 10.5l6-3.5v10l-6-3.5z"/></svg></div><div class="body"><span class="lbl">Google Meet</span><span class="price">₹700 <small>/ session</small></span><span class="sub">अधिकतम 55 मिनट · video पर आमने-सामने</span><span class="spacer"></span><a class="btn btn-accent" data-book="meet" href="#">Meet booking करें</a></div></div>
-      <div class="card"><div class="art"><svg class="rings" width="130" height="130" viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="72" fill="none" stroke="#DAE6F0"/><circle cx="75" cy="75" r="52" fill="#fff"/></svg><svg class="icon" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 19a5 5 0 0 1 10 0M11 19a5 5 0 0 1 10 0"/></svg></div><div class="body"><span class="lbl">मुलाक़ात (वैकल्पिक)</span><span class="price">₹2,000 <small>/ session</small></span><span class="sub">55 मिनट · आपका घर या आपकी चुनी कोई निजी जगह · मुख्य रूप से Mumbai</span><span class="spacer"></span><a class="btn btn-accent" data-book="meetup" href="#">मुलाक़ात बुक करें</a></div></div>
+      <div class="card"><div class="art"><svg class="rings" width="130" height="130" viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="72" fill="none" stroke="#DAE6F0"/><circle cx="75" cy="75" r="52" fill="#fff"/></svg><svg class="icon" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/><path d="M15 3a6 6 0 0 1 6 6M15 6.5a2.5 2.5 0 0 1 2.5 2.5"/></svg></div><div class="body"><span class="lbl">Phone</span><span class="price">₹500 <small>/ session</small></span><span class="sub"><span data-i18n="sub_phone">अधिकतम 25 मिनट · आप जहाँ भी हों</span></span><span class="spacer"></span><a class="btn btn-accent" data-book="phone" href="#"><span data-i18n="cta_phone">Phone booking करें</span></a></div></div>
+      <div class="card"><div class="art"><svg class="rings" width="130" height="130" viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="72" fill="none" stroke="#DAE6F0"/><circle cx="75" cy="75" r="52" fill="#fff"/></svg><svg class="icon" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="2"/><path d="M15.5 10.5l6-3.5v10l-6-3.5z"/></svg></div><div class="body"><span class="lbl">Google Meet</span><span class="price">₹700 <small>/ session</small></span><span class="sub"><span data-i18n="sub_meet">अधिकतम 55 मिनट · video पर आमने-सामने</span></span><span class="spacer"></span><a class="btn btn-accent" data-book="meet" href="#"><span data-i18n="cta_meet">Meet booking करें</span></a></div></div>
+      <div class="card"><div class="art"><svg class="rings" width="130" height="130" viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="72" fill="none" stroke="#DAE6F0"/><circle cx="75" cy="75" r="52" fill="#fff"/></svg><svg class="icon" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 19a5 5 0 0 1 10 0M11 19a5 5 0 0 1 10 0"/></svg></div><div class="body"><span class="lbl"><span data-i18n="lbl_meetup">मुलाक़ात (वैकल्पिक)</span></span><span class="price">₹2,000 <small>/ session</small></span><span class="sub"><span data-i18n="sub_meetup">55 मिनट · आपका घर या आपकी चुनी कोई निजी जगह · मुख्य रूप से Mumbai</span></span><span class="spacer"></span><a class="btn btn-accent" data-book="meetup" href="#"><span data-i18n="cta_meetup">मुलाक़ात बुक करें</span></a></div></div>
     </div>
     <div class="info">
       <div>
         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>
-        <div><p class="t">शुल्क पूरे session के हिसाब से</p><p class="d">Phone का session 25 मिनट का है, Google Meet और मुलाक़ात का 55 मिनट का। Session के समय के अंदर कितनी भी देर बात हो, शुल्क पूरे session का लगेगा। समय से ज़्यादा होने पर अगले session का पूरा शुल्क लगेगा, चाहे 10 मिनट ही ज़्यादा हों।</p></div>
+        <div><p class="t"><span data-i18n="info1_t">शुल्क पूरे session के हिसाब से</span></p><p class="d"><span data-i18n="info1_d">Phone का session 25 मिनट का है, Google Meet और मुलाक़ात का 55 मिनट का। Session के समय के अंदर कितनी भी देर बात हो, शुल्क पूरे session का लगेगा। समय से ज़्यादा होने पर अगले session का पूरा शुल्क लगेगा, चाहे 10 मिनट ही ज़्यादा हों।</span></p></div>
       </div>
       <div>
         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-        <div><p class="t">पूरी तरह निजी</p><p class="d">आपकी बात और जानकारी पूरी तरह गोपनीय रहेगी, किसी और को नहीं बताई जाएगी। ज़रूरत हो तो मुलाक़ात आपकी चुनी किसी निजी जगह पर भी हो सकती है।</p></div>
+        <div><p class="t"><span data-i18n="info2_t">पूरी तरह निजी</span></p><p class="d"><span data-i18n="info2_d">आपकी बात और जानकारी पूरी तरह गोपनीय रहेगी, किसी और को नहीं बताई जाएगी। ज़रूरत हो तो मुलाक़ात आपकी चुनी किसी निजी जगह पर भी हो सकती है।</span></p></div>
       </div>
     </div>
-    <p style="margin:0;text-align:center;font-size:15px;color:var(--muted2)">भुगतान पहले, फिर consultation। Booking की पुष्टि होते ही calendar invite और WhatsApp पर जानकारी मिलेगी।</p>
+    <p style="margin:0;text-align:center;font-size:15px;color:var(--muted2)"><span data-i18n="pay_line">भुगतान पहले, फिर consultation। Booking की पुष्टि होते ही calendar invite और WhatsApp पर जानकारी मिलेगी।</span></p>
   </div>
 </section>
 
@@ -262,9 +268,9 @@ footer .contact{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;color:va
   </svg>
   <div class="inner">
     <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20c-4 0-8-2-9-6 3-1 6 0 9 3 3-3 6-4 9-3-1 4-5 6-9 6z"/><path d="M12 17c-2-2-3-5-2-9 1 0 2 1 2 1s1-1 2-1c1 4 0 7-2 9z"/></svg>
-    <h2>बात करते हैं।</h2>
+    <h2 data-i18n="closing_h2">बात करते हैं।</h2>
     <div class="row">
-      <a class="btn btn-accent" href="#book">Consultation बुक करें</a>
+      <a class="btn btn-accent" href="#book"><span data-i18n="closing_cta">Consultation बुक करें</span></a>
       <a class="btn btn-soft" href="https://wa.me/919076037003" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
@@ -276,12 +282,12 @@ footer .contact{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;color:va
       <p class="serif" style="margin:0;font-size:20px">Shri Arjuna</p>
       <div class="contact">
         <a href="https://wa.me/919076037003" target="_blank" rel="noopener">WhatsApp +91 90760 37003</a>
-        <span>मुलाक़ात: मुख्य रूप से Mumbai में</span>
+        <span><span data-i18n="foot_area">मुलाक़ात: मुख्य रूप से Mumbai में</span></span>
         <a href="mailto:vishwakarmaarjun128@gmail.com">vishwakarmaarjun128@gmail.com</a>
       </div>
     </div>
     <div class="pills">
-      <span style="font-size:14px;color:var(--muted2)">अन्य व्यवसाय</span>
+      <span style="font-size:14px;color:var(--muted2)"><span data-i18n="foot_other">अन्य व्यवसाय</span></span>
       <a class="pill" href="https://www.instagram.com/visualzonefilms/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v14M17 5v14M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>Visual Zone Films</a>
       <a class="pill" href="https://www.instagram.com/salon.slot/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg>Salon Slot</a>
     </div>
@@ -291,7 +297,7 @@ footer .contact{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;color:va
       <a href="refund.html">Refund &amp; Cancellation</a>
       <a href="contact.html">Contact</a>
     </div>
-    <p class="disclaimer">Astrology और Vastu पारंपरिक मार्गदर्शन हैं; इनसे किसी परिणाम की गारंटी नहीं दी जाती। Medical, legal या financial मामलों में किसी योग्य professional की सलाह ज़रूर लें।</p>
+    <p class="disclaimer"><span data-i18n="disclaimer">Astrology और Vastu पारंपरिक मार्गदर्शन हैं; इनसे किसी परिणाम की गारंटी नहीं दी जाती। Medical, legal या financial मामलों में किसी योग्य professional की सलाह ज़रूर लें।</span></p>
   </div>
 </footer>
 
@@ -303,16 +309,13 @@ var BOOKING = {
   meetup: "https://cal.id/shri-arjunanand/private-consultation-maximum-55-minutes"
 };
 var WA = "https://wa.me/919076037003?text=";
-var LABEL = {phone:"Phone Consultation (₹500)", meet:"Google Meet Consultation (₹700)", meetup:"मुलाक़ात / Private Meeting (₹2,000)"};
-document.querySelectorAll('[data-book]').forEach(function(a){
-  var k=a.getAttribute('data-book');
-  a.href = BOOKING[k] || (WA + encodeURIComponent("नमस्ते Shri Arjuna जी, मुझे " + LABEL[k] + " बुक करना है।"));
-  a.target="_blank"; a.rel="noopener";
-});
-
-var S = [{"id": "astro", "name": "Astrology", "hi": "ज्योतिष", "hook": "किसी ज़रूरी फैसले को लेकर मन में सवाल हैं?", "fits": ["शादी", "Career", "बड़ा बदलाव", "Kundali समझना"], "note": "Astrology पारंपरिक मार्गदर्शन है, कोई पक्की भविष्यवाणी नहीं।"}, {"id": "vastu", "name": "Vastu", "hi": "घर और जगह", "hook": "अपने घर या office के Vastu को लेकर कोई सवाल है?", "fits": ["नया घर", "Office", "दुकान", "बदलाव से पहले"], "note": "Vastu पारंपरिक ज्ञान है; सुझाव आपकी जगह को समझकर दिए जाते हैं, किसी परिणाम की गारंटी के साथ नहीं।"}, {"id": "personal", "name": "Life Guidance", "hi": "जीवन और career", "hook": "ज़िंदगी के किसी मोड़ पर समझ नहीं आ रहा कि आगे क्या करें?", "fits": ["Career direction", "Personal फैसला", "Life planning"], "note": "यह counselling या therapy का विकल्प नहीं है।"}, {"id": "business", "name": "Business Growth", "hi": "Business परामर्श", "hook": "Business बढ़ रहा है, पर क्या system उसे संभाल पा रहा है?", "fits": ["रुकी हुई growth", "नया business", "Priorities"], "note": "यह बातचीत दिशा देती है; revenue बढ़ने की गारंटी नहीं देती।"}, {"id": "marketing", "name": "Marketing & Ads", "hi": "Campaign strategy", "hook": "Marketing पर खर्च तो हो रहा है, पर क्या आपकी बात सही लोगों तक पहुँच रही है?", "fits": ["Ads", "Brand message", "Launch plan"], "note": ""}, {"id": "tech", "name": "Tech & Automation", "hi": "Systems और tools", "hook": "जो काम automate हो सकते हैं, क्या उनमें अब भी घंटों लग रहे हैं?", "fits": ["Workflow", "Automation", "सही software"], "note": ""}, {"id": "team", "name": "Team & Systems", "hi": "Team और operations", "hook": "Team मेहनत कर रही है, फिर भी काम में clarity और ownership नहीं दिखती?", "fits": ["Role clarity", "Accountability", "Reporting"], "note": ""}];
+var I18N = {"en": {"nav_choose": "Choose your question", "nav_how": "How it works", "nav_fees": "Fees", "nav_talk": "Let's talk", "eyebrow": "Pause · Breathe", "btn_choose": "Choose your question", "choose_h2": "What’s on your mind today?", "panel_cta": "Start the conversation", "panel_fee": "Phone ₹500 (25 min) · Meet ₹700 · In-person ₹2,000 (55 min)", "dawn": "After every night, a morning.", "how_h2": "Four steps", "s1": "Choose your question", "s2": "Choose Phone, Meet or In-person", "s3": "Pick a time and pay", "s4": "Find your way forward", "fees_h2": "Three ways to talk", "lbl_meetup": "In-person (optional)", "sub_phone": "Up to 25 minutes · wherever you are", "sub_meet": "Up to 55 minutes · face to face on video", "sub_meetup": "55 minutes · your home or a private place you choose · mainly Mumbai", "cta_phone": "Book a phone call", "cta_meet": "Book a Meet call", "cta_meetup": "Book an in-person meeting", "info1_t": "Charged per full session", "info1_d": "A phone session is 25 minutes; Google Meet and in-person sessions are 55 minutes. However long we talk within the session, the full session fee applies. If we go beyond the session time, the full fee for the next session applies, even if it is only 10 minutes more.", "info2_t": "Completely private", "info2_d": "What you share stays completely confidential and is never told to anyone else. If needed, we can also meet at a private place of your choice.", "pay_line": "Payment first, then the consultation. Once your booking is confirmed, you will get a calendar invite and details on WhatsApp.", "closing_h2": "Let’s talk.", "closing_cta": "Book a consultation", "foot_area": "In-person: mainly in Mumbai", "foot_other": "Other businesses", "disclaimer": "Astrology and Vastu are traditional guidance; no outcome is guaranteed. For medical, legal or financial matters, please consult a qualified professional.", "h1": "Every question has a perspective.<br>Every challenge, a way forward.", "wa": "Hello Shri Arjuna, I would like to book {x}."}, "hi": {"nav_choose": "सवाल चुनें", "nav_how": "प्रक्रिया", "nav_fees": "शुल्क", "nav_talk": "बात करें", "eyebrow": "रुकिए · साँस लीजिए", "btn_choose": "अपना सवाल चुनें", "choose_h2": "आज मन में क्या है?", "panel_cta": "बात शुरू करें", "panel_fee": "Phone ₹500 (25 मिनट) · Meet ₹700 · मुलाक़ात ₹2,000 (55 मिनट)", "dawn": "हर रात के बाद, सुबह।", "how_h2": "चार कदम", "s1": "सवाल चुनें", "s2": "Phone, Meet या मुलाक़ात चुनें", "s3": "समय चुनें और भुगतान करें", "s4": "आगे का रास्ता समझें", "fees_h2": "बात करने के तीन तरीके", "lbl_meetup": "मुलाक़ात (वैकल्पिक)", "sub_phone": "अधिकतम 25 मिनट · आप जहाँ भी हों", "sub_meet": "अधिकतम 55 मिनट · video पर आमने-सामने", "sub_meetup": "55 मिनट · आपका घर या आपकी चुनी कोई निजी जगह · मुख्य रूप से Mumbai", "cta_phone": "Phone booking करें", "cta_meet": "Meet booking करें", "cta_meetup": "मुलाक़ात बुक करें", "info1_t": "शुल्क पूरे session के हिसाब से", "info1_d": "Phone का session 25 मिनट का है, Google Meet और मुलाक़ात का 55 मिनट का। Session के समय के अंदर कितनी भी देर बात हो, शुल्क पूरे session का लगेगा। समय से ज़्यादा होने पर अगले session का पूरा शुल्क लगेगा, चाहे 10 मिनट ही ज़्यादा हों।", "info2_t": "पूरी तरह निजी", "info2_d": "आपकी बात और जानकारी पूरी तरह गोपनीय रहेगी, किसी और को नहीं बताई जाएगी। ज़रूरत हो तो मुलाक़ात आपकी चुनी किसी निजी जगह पर भी हो सकती है।", "pay_line": "भुगतान पहले, फिर consultation। Booking की पुष्टि होते ही calendar invite और WhatsApp पर जानकारी मिलेगी।", "closing_h2": "बात करते हैं।", "closing_cta": "Consultation बुक करें", "foot_area": "मुलाक़ात: मुख्य रूप से Mumbai में", "foot_other": "अन्य व्यवसाय", "disclaimer": "Astrology और Vastu पारंपरिक मार्गदर्शन हैं; इनसे किसी परिणाम की गारंटी नहीं दी जाती। Medical, legal या financial मामलों में किसी योग्य professional की सलाह ज़रूर लें।", "h1": "हर सवाल का एक नज़रिया।<br>हर उलझन का एक रास्ता।", "wa": "नमस्ते Shri Arjuna जी, मुझे {x} बुक करना है।"}, "mr": {"nav_choose": "प्रश्न निवडा", "nav_how": "प्रक्रिया", "nav_fees": "शुल्क", "nav_talk": "बोलूया", "eyebrow": "थांबा · श्वास घ्या", "btn_choose": "तुमचा प्रश्न निवडा", "choose_h2": "आज मनात काय आहे?", "panel_cta": "संवाद सुरू करा", "panel_fee": "Phone ₹500 (25 मिनिटे) · Meet ₹700 · भेट ₹2,000 (55 मिनिटे)", "dawn": "प्रत्येक रात्रीनंतर, सकाळ.", "how_h2": "चार पायऱ्या", "s1": "प्रश्न निवडा", "s2": "Phone, Meet किंवा भेट निवडा", "s3": "वेळ निवडा आणि पैसे भरा", "s4": "पुढचा मार्ग समजून घ्या", "fees_h2": "बोलण्याचे तीन मार्ग", "lbl_meetup": "प्रत्यक्ष भेट (ऐच्छिक)", "sub_phone": "जास्तीत जास्त 25 मिनिटे · तुम्ही कुठेही असा", "sub_meet": "जास्तीत जास्त 55 मिनिटे · video वर समोरासमोर", "sub_meetup": "55 मिनिटे · तुमचे घर किंवा तुम्ही निवडलेली खाजगी जागा · मुख्यतः Mumbai", "cta_phone": "Phone booking करा", "cta_meet": "Meet booking करा", "cta_meetup": "भेट बुक करा", "info1_t": "शुल्क पूर्ण session नुसार", "info1_d": "Phone चे session 25 मिनिटांचे आहे, Google Meet आणि प्रत्यक्ष भेटीचे 55 मिनिटांचे. Session च्या वेळेत कितीही वेळ बोललो तरी पूर्ण session चे शुल्क लागेल. वेळ ओलांडल्यास पुढच्या session चे पूर्ण शुल्क लागेल, अगदी 10 मिनिटे जास्त झाली तरी.", "info2_t": "पूर्णपणे खाजगी", "info2_d": "तुमची गोष्ट आणि माहिती पूर्णपणे गोपनीय राहील, इतर कोणालाही सांगितली जाणार नाही. गरज असल्यास भेट तुम्ही निवडलेल्या खाजगी जागीही होऊ शकते.", "pay_line": "आधी पैसे, मग consultation. Booking निश्चित होताच calendar invite आणि WhatsApp वर माहिती मिळेल.", "closing_h2": "बोलूया.", "closing_cta": "Consultation बुक करा", "foot_area": "भेट: मुख्यतः Mumbai मध्ये", "foot_other": "इतर व्यवसाय", "disclaimer": "Astrology आणि Vastu हे पारंपरिक मार्गदर्शन आहे; कोणत्याही परिणामाची हमी दिली जात नाही. वैद्यकीय, कायदेशीर किंवा आर्थिक बाबींसाठी पात्र तज्ज्ञांचा सल्ला नक्की घ्या.", "h1": "प्रत्येक प्रश्नाला एक दृष्टिकोन.<br>प्रत्येक गुंतीला एक मार्ग.", "wa": "नमस्कार Shri Arjuna जी, मला {x} बुक करायचे आहे."}};
+var LBL = {"hi": {"phone": "Phone Consultation (₹500)", "meet": "Google Meet Consultation (₹700)", "meetup": "मुलाक़ात / Private Meeting (₹2,000)"}, "en": {"phone": "a Phone Consultation (₹500)", "meet": "a Google Meet Consultation (₹700)", "meetup": "an In-person Private Meeting (₹2,000)"}, "mr": {"phone": "Phone Consultation (₹500)", "meet": "Google Meet Consultation (₹700)", "meetup": "प्रत्यक्ष भेट / Private Meeting (₹2,000)"}};
+var SV = {"hi": [{"id": "astro", "name": "Astrology", "hi": "ज्योतिष", "hook": "किसी ज़रूरी फैसले को लेकर मन में सवाल हैं?", "fits": ["शादी", "Career", "बड़ा बदलाव", "Kundali समझना"], "note": "Astrology पारंपरिक मार्गदर्शन है, कोई पक्की भविष्यवाणी नहीं।"}, {"id": "vastu", "name": "Vastu", "hi": "घर और जगह", "hook": "अपने घर या office के Vastu को लेकर कोई सवाल है?", "fits": ["नया घर", "Office", "दुकान", "बदलाव से पहले"], "note": "Vastu पारंपरिक ज्ञान है; सुझाव आपकी जगह को समझकर दिए जाते हैं, किसी परिणाम की गारंटी के साथ नहीं।"}, {"id": "personal", "name": "Life Guidance", "hi": "जीवन और career", "hook": "ज़िंदगी के किसी मोड़ पर समझ नहीं आ रहा कि आगे क्या करें?", "fits": ["Career direction", "Personal फैसला", "Life planning"], "note": "यह counselling या therapy का विकल्प नहीं है।"}, {"id": "business", "name": "Business Growth", "hi": "Business परामर्श", "hook": "Business बढ़ रहा है, पर क्या system उसे संभाल पा रहा है?", "fits": ["रुकी हुई growth", "नया business", "Priorities"], "note": "यह बातचीत दिशा देती है; revenue बढ़ने की गारंटी नहीं देती।"}, {"id": "marketing", "name": "Marketing & Ads", "hi": "Campaign strategy", "hook": "Marketing पर खर्च तो हो रहा है, पर क्या आपकी बात सही लोगों तक पहुँच रही है?", "fits": ["Ads", "Brand message", "Launch plan"], "note": ""}, {"id": "tech", "name": "Tech & Automation", "hi": "Systems और tools", "hook": "जो काम automate हो सकते हैं, क्या उनमें अब भी घंटों लग रहे हैं?", "fits": ["Workflow", "Automation", "सही software"], "note": ""}, {"id": "team", "name": "Team & Systems", "hi": "Team और operations", "hook": "Team मेहनत कर रही है, फिर भी काम में clarity और ownership नहीं दिखती?", "fits": ["Role clarity", "Accountability", "Reporting"], "note": ""}], "en": [{"id": "astro", "name": "Astrology", "hi": "Astrology guidance", "hook": "Questions on your mind about an important decision?", "fits": ["Marriage", "Career", "A big change", "Understanding your Kundali"], "note": "Astrology is traditional guidance, not a certain prediction."}, {"id": "vastu", "name": "Vastu", "hi": "Home & spaces", "hook": "Any questions about the Vastu of your home or office?", "fits": ["New home", "Office", "Shop", "Before making changes"], "note": "Vastu is traditional knowledge; suggestions are based on understanding your space, with no guarantee of outcomes."}, {"id": "personal", "name": "Life Guidance", "hi": "Life & career", "hook": "At a turning point in life and not sure what to do next?", "fits": ["Career direction", "A personal decision", "Life planning"], "note": "This is not a substitute for counselling or therapy."}, {"id": "business", "name": "Business Growth", "hi": "Business consultation", "hook": "Your business is growing — but can your system handle it?", "fits": ["Stalled growth", "New business", "Priorities"], "note": "This conversation gives direction; it does not guarantee revenue growth."}, {"id": "marketing", "name": "Marketing & Ads", "hi": "Campaign strategy", "hook": "Spending on marketing, but is your message reaching the right people?", "fits": ["Ads", "Brand message", "Launch plan"], "note": ""}, {"id": "tech", "name": "Tech & Automation", "hi": "Systems & tools", "hook": "Still spending hours on work that could be automated?", "fits": ["Workflow", "Automation", "The right software"], "note": ""}, {"id": "team", "name": "Team & Systems", "hi": "Team & operations", "hook": "Your team works hard, yet there is no clarity or ownership?", "fits": ["Role clarity", "Accountability", "Reporting"], "note": ""}], "mr": [{"id": "astro", "name": "Astrology", "hi": "ज्योतिष", "hook": "एखाद्या महत्त्वाच्या निर्णयाबद्दल मनात प्रश्न आहेत?", "fits": ["लग्न", "Career", "मोठा बदल", "Kundali समजून घेणे"], "note": "Astrology हे पारंपरिक मार्गदर्शन आहे, निश्चित भविष्यवाणी नाही."}, {"id": "vastu", "name": "Vastu", "hi": "घर आणि जागा", "hook": "तुमच्या घराच्या किंवा office च्या Vastu बद्दल काही प्रश्न आहे?", "fits": ["नवीन घर", "Office", "दुकान", "बदल करण्यापूर्वी"], "note": "Vastu हे पारंपरिक ज्ञान आहे; सूचना तुमची जागा समजून दिल्या जातात, परिणामाची हमी नसते."}, {"id": "personal", "name": "Life Guidance", "hi": "आयुष्य आणि career", "hook": "आयुष्याच्या एखाद्या वळणावर पुढे काय करावे ते समजत नाही?", "fits": ["Career ची दिशा", "वैयक्तिक निर्णय", "Life planning"], "note": "हे counselling किंवा therapy चा पर्याय नाही."}, {"id": "business", "name": "Business Growth", "hi": "Business सल्ला", "hook": "Business वाढतोय, पण तुमची system तो सांभाळू शकते का?", "fits": ["थांबलेली growth", "नवीन business", "Priorities"], "note": "हा संवाद दिशा देतो; revenue वाढीची हमी देत नाही."}, {"id": "marketing", "name": "Marketing & Ads", "hi": "Campaign strategy", "hook": "Marketing वर खर्च होतोय, पण तुमची गोष्ट योग्य लोकांपर्यंत पोहोचतेय का?", "fits": ["Ads", "Brand message", "Launch plan"], "note": ""}, {"id": "tech", "name": "Tech & Automation", "hi": "Systems आणि tools", "hook": "जी कामे automate होऊ शकतात, त्यात अजूनही तास जात आहेत का?", "fits": ["Workflow", "Automation", "योग्य software"], "note": ""}, {"id": "team", "name": "Team & Systems", "hi": "Team आणि operations", "hook": "Team मेहनत करतेय, तरीही कामात clarity आणि ownership दिसत नाही?", "fits": ["Role clarity", "Accountability", "Reporting"], "note": ""}]};
+var LANG = 'en', S = SV.en, current = 'vastu';
 var tiles = document.querySelectorAll('.tile');
 function pick(id, quiet){
+  current = id;
   var s = S.filter(function(x){return x.id===id})[0];
   tiles.forEach(function(t){t.setAttribute('aria-pressed', t.dataset.id===id ? 'true':'false')});
   document.querySelectorAll('#bigIcons svg').forEach(function(sv){sv.classList.toggle('on', sv.dataset.id===id)});
@@ -321,10 +324,31 @@ function pick(id, quiet){
   var f = document.getElementById('pFits'); f.innerHTML='';
   s.fits.forEach(function(x){var c=document.createElement('span');c.className='chip';c.textContent=x;f.appendChild(c)});
   var n = document.getElementById('pNote'); n.textContent = s.note || ''; n.style.display = s.note ? '' : 'none';
-  if(!quiet){var pn=document.querySelector('.panel'); var r=pn.getBoundingClientRect(); var small=window.matchMedia('(max-width: 900px)').matches; if(small || r.top<0 || r.bottom>window.innerHeight){try{pn.scrollIntoView({behavior:'smooth',block:'start'});}catch(e){pn.scrollIntoView(true);} try{if(window.parent!==window){window.location.hash='pName';history.replaceState(null,'',' ');}}catch(e){}}}
+  if(!quiet){var pn=document.querySelector('.panel'); var r=pn.getBoundingClientRect(); var small=window.matchMedia('(max-width: 900px)').matches; if(small || r.top<0 || r.bottom>window.innerHeight){try{pn.scrollIntoView({behavior:'smooth',block:'start'});}catch(e){pn.scrollIntoView(true);}}}
 }
 tiles.forEach(function(t){t.addEventListener('click',function(){pick(t.dataset.id)})});
-pick('vastu', true);
+function setLang(l, save){
+  if(!I18N[l]) l='en'; LANG=l; S=SV[l];
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')]; if(v!=null) el.textContent=v;});
+  document.querySelectorAll('[data-i18n-html]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n-html')]; if(v!=null) el.innerHTML=v;});
+  tiles.forEach(function(t){var s=S.filter(function(x){return x.id===t.dataset.id})[0]; t.querySelector('.hi').textContent=s.hi;});
+  document.querySelectorAll('[data-book]').forEach(function(a){
+    var k=a.getAttribute('data-book');
+    a.href = BOOKING[k] || (WA + encodeURIComponent(I18N[l].wa.replace('{x}', LBL[l][k])));
+    a.target="_blank"; a.rel="noopener";
+  });
+  document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed', b.dataset.lang===l ? 'true':'false')});
+  pick(current, true);
+  if(save){try{localStorage.setItem('sa_lang', l)}catch(e){}}
+}
+document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang,true)})});
+(function(){
+  var saved=null; try{saved=localStorage.getItem('sa_lang')}catch(e){}
+  var pref=(navigator.languages||[navigator.language||'en']).map(function(x){return String(x).slice(0,2).toLowerCase()});
+  var auto=pref.filter(function(x){return x==='hi'||x==='mr'||x==='en'})[0];
+  setLang(saved || auto || 'en', false);
+})();
 </script>
 </body>
 </html>
