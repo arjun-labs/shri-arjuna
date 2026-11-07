@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shri Arjuna — हर सवाल का एक नज़रिया</title>
+<meta name="description" content="Astrology, Vastu, Life Guidance और Business consultation — Phone, Google Meet या आमने-सामने मुलाक़ात। भुगतान पहले, फिर consultation।">
+<link rel="icon" href="assets/avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--space:#02040A;--ink:#1D2733;--muted:#4F5D6C;--muted2:#586574;--accent:#3D6A92;--accent-d:#2B5174;--line:#DCE6EE;--mist:#F4F8FB;--serif:'Noto Serif Devanagari',serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Mukta',system-ui,sans-serif;color:var(--ink);background:#fff;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}a:hover{color:var(--accent-d)}
+img{max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding-left:24px;padding-right:24px}
+.serif{font-family:var(--serif);font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:13px 28px;border-radius:999px;font-weight:500;text-decoration:none;border:1px solid transparent;cursor:pointer;font:inherit;font-weight:500;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-light{background:#fff;color:#0B1A2E}.btn-light:hover{color:#0B1A2E;background:#EAF2F9}
+.btn-ghost{color:#fff;border-color:#6F8FB0;background:transparent}.btn-ghost:hover{color:#fff;background:rgba(255,255,255,.06)}
+.btn-accent{background:var(--accent);color:#fff}.btn-accent:hover{color:#fff;background:var(--accent-d)}
+.btn-soft{background:#fff;color:var(--accent-d);border-color:#C9DBEA}
+.tex-grain{background-image:url(assets/grain.png)}
+.stars{background-image:url(assets/stars.png)}
+/* hero */
+.hero{position:relative;overflow:hidden;min-height:max(900px,100vh);background:var(--space) url(assets/cosmos2.jpg) center 62%/cover no-repeat;color:#fff}
+.hero .swirl-clip{position:absolute;left:0;right:0;top:0;height:62%;overflow:hidden;pointer-events:none}
+.hero .swirl{position:absolute;left:50%;bottom:0;width:2200px;height:2200px;margin:0 0 -1100px -1100px;transform:scaleY(.34)}
+.hero .swirl img{display:block;width:100%;height:100%;opacity:.9;animation:spin 240s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.nav{position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:22px;padding-bottom:22px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}.brand:hover{color:#fff}
+.avatar{width:46px;height:46px;border-radius:50%;padding:2px;border:1px solid #6F8FB0;display:inline-flex}
+.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.brand span{font-family:var(--serif);font-size:20px;font-weight:500}
+.nav nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 24px;font-size:16px}
+.nav nav a{color:#C9D8E8;text-decoration:none}.nav nav a:hover{color:#fff}
+.nav nav a.btn{color:#0B1A2E;min-height:44px;padding:10px 20px}
+.hero-copy{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:64px 24px 0;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+.eyebrow{margin:0;font-size:14px;letter-spacing:3px;text-transform:uppercase;color:#9FB8D2}
+.hero h1{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(34px,6.4vw,58px);line-height:1.3}
+.row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+/* chooser */
+.choose{position:relative;overflow:hidden;background-color:var(--space);color:#EAF2FB;margin-top:-1px}
+.orbit-clip{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.orbit{position:absolute;left:50%;top:50%;width:2600px;height:2600px;margin:-1300px 0 0 -1300px;animation:spin 420s linear infinite}
+.orbit.dark{background-image:url(assets/dust_dark1.png);opacity:.8}
+.orbit.light{background-image:url(assets/dust_light.png);opacity:.9}
+.choose .inner{position:relative;padding-top:72px;padding-bottom:110px;display:flex;flex-direction:column;gap:40px}
+.center{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+h2{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(30px,4vw,40px);line-height:1.35}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.tile{cursor:pointer;font:inherit;color:#EAF2FB;text-align:center;padding:0;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;background:rgba(255,255,255,.035);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.10);transition:border-color .3s,box-shadow .3s,background .3s}
+.tile:hover{border-color:rgba(143,184,224,.45)}
+.tile[aria-pressed=true]{border-color:rgba(143,184,224,.75);box-shadow:0 0 48px rgba(120,170,230,.28)}
+.tile .art{position:relative;height:150px;display:flex;align-items:center;justify-content:center}
+.tile[aria-pressed=true] .art{background:rgba(143,184,224,.10)}
+.tile .art .rings{position:absolute}
+.tile .art svg.icon{position:relative}
+.tile .txt{padding:14px 16px 18px;display:flex;flex-direction:column;gap:2px;border-top:1px solid rgba(255,255,255,.06)}
+.tile .nm{font-size:19px;font-weight:600;line-height:1.3}
+.tile .hi{font-size:15px;color:#9FB4CA}
+.panel{scroll-margin-top:16px;background:rgba(255,255,255,.04);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);border-radius:30px;overflow:hidden;display:flex;flex-wrap:wrap}
+.panel .art{flex:1 1 320px;min-height:300px;position:relative;display:flex;align-items:center;justify-content:center}
+.panel .art .bg{position:absolute;inset:0;width:100%;height:100%}
+.panel .art .big{position:relative;display:inline-flex}
+.panel .art .big svg{display:none}
+.panel .art .big svg.on{display:block}
+.panel .body{flex:999 1 420px;min-width:0;padding:38px 40px;display:flex;flex-direction:column;gap:18px}
+.panel .tag{margin:0;font-size:14px;letter-spacing:1.4px;text-transform:uppercase;color:#8FB8E0}
+.panel .hook{margin:0;font-family:var(--serif);font-size:clamp(22px,2.6vw,28px);line-height:1.45;color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:15px;color:#CFE0F2;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 14px}
+.panel .fee{font-size:15px;color:#A9BDD2}
+.panel .note{margin:0;font-size:13px;color:#8FA6BE}
+/* dawn */
+.dawn{background:#fff url(assets/dawn.jpg) center/100% 100% no-repeat;margin-top:-1px}
+.dawn p{margin:0;font-family:var(--serif);font-size:30px;line-height:1.5;color:#EAF2FB;text-align:center;padding:90px 24px 230px}
+/* how */
+.how{position:relative;overflow:hidden}
+.how .inner{position:relative;padding-top:96px;padding-bottom:96px;display:flex;flex-direction:column;align-items:center;gap:48px}
+.steps{position:relative;width:100%}
+.steps .path{position:absolute;left:0;top:10px;width:100%;height:100px}
+.steps .grid{position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+.step{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.step .ic{width:120px;height:120px;border-radius:50%;background:#fff url(assets/wash.png) center bottom/cover;border:1px solid #C9DBEA;display:inline-flex;align-items:center;justify-content:center}
+.step h3{margin:0;font-size:20px;font-weight:600}
+/* fees */
+.fees{position:relative;overflow:hidden;background-color:var(--mist);border-top:1px solid #E6EEF4;border-bottom:1px solid #E6EEF4}
+.fees .inner{position:relative;padding-top:96px;padding-bottom:96px;display:flex;flex-direction:column;gap:28px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden;display:flex;flex-direction:column}
+.card .art{height:150px;position:relative;display:flex;align-items:center;justify-content:center;background:#EEF4FA url(assets/wash.png) center bottom/cover}
+.card .art .rings{position:absolute}
+.card .art svg.icon{position:relative}
+.card .body{padding:22px 26px 26px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .lbl{font-size:15px;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent)}
+.card .price{font-family:var(--serif);font-size:40px;font-weight:500;line-height:1.2}
+.card .price small{font-size:18px;color:var(--muted2);font-family:'Mukta',sans-serif}
+.card .sub{font-size:14px;color:var(--muted2)}
+.card .btn{margin-top:auto;align-self:flex-start}
+.card .body .spacer{flex:1;min-height:10px}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.info>div{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start}
+.info p{margin:0}
+.info .t{font-weight:600}.info .d{font-size:15px;color:var(--muted)}
+/* closing */
+.closing{position:relative;overflow:hidden;background:#F6F9FC url(assets/wash.png) center top/cover no-repeat;border-top:1px solid #E6EEF4}
+.closing .scene{position:absolute;left:0;bottom:0;width:100%;height:100%}
+.closing .inner{position:relative;max-width:860px;margin:0 auto;padding:104px 24px 150px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+/* footer */
+footer{border-top:1px solid #E6EEF4}
+footer .inner{padding-top:48px;padding-bottom:36px;display:flex;flex-direction:column;gap:22px}
+footer .top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
+footer .contact{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:15px;color:var(--muted)}
+.pills{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;border-top:1px solid #E6EEF4;padding-top:20px}
+.pill{text-decoration:none;color:var(--accent-d);display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 16px;min-height:44px;font-size:15px}
+.legal{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:14px}
+.legal a{color:var(--muted2)}
+.disclaimer{margin:0;font-size:13px;color:var(--muted2)}
+@media (max-width:640px){
+  .hero{min-height:860px;background-position:center 66%}
+  .panel .body{padding:28px 24px}
+  .dawn p{font-size:24px;padding:70px 24px 170px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="swirl-clip" aria-hidden="true"><div class="swirl"><img src="assets/swirl.png" alt=""></div></div>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="avatar"><img src="assets/avatar.jpg" alt="Shri Arjuna"></span><span>Shri Arjuna</span></a>
+    <nav aria-label="मुख्य">
+      <a href="#choose">सवाल चुनें</a>
+      <a href="#how">प्रक्रिया</a>
+      <a href="#book">शुल्क</a>
+      <a class="btn btn-light" href="#book">बात करें</a>
+    </nav>
+  </div>
+  <div class="hero-copy">
+    <p class="eyebrow">रुकिए · साँस लीजिए</p>
+    <h1>हर सवाल का एक नज़रिया।<br>हर उलझन का एक रास्ता।</h1>
+    <div class="row" style="padding-top:8px">
+      <a class="btn btn-light" href="#choose">अपना सवाल चुनें</a>
+      <a class="btn btn-ghost" href="https://wa.me/919076037003" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section class="choose stars" id="choose">
+  <div class="orbit-clip" aria-hidden="true"><div class="orbit dark"></div></div>
+  <svg viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%">
+    <defs><radialGradient id="orb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#3B5E8C" stop-opacity=".35"/><stop offset="100%" stop-color="#3B5E8C" stop-opacity="0"/></radialGradient></defs>
+    <circle cx="980" cy="640" r="380" fill="url(#orb)"/>
+    <circle cx="160" cy="180" r="260" fill="url(#orb)" opacity=".6"/>
+    <ellipse cx="600" cy="460" rx="560" ry="180" fill="none" stroke="#fff" stroke-opacity=".05"/>
+    <ellipse cx="600" cy="460" rx="420" ry="130" fill="none" stroke="#fff" stroke-opacity=".05" stroke-dasharray="1 8" stroke-linecap="round"/>
+  </svg>
+  <div class="wrap inner">
+    <div class="center">
+      <svg width="120" height="20" viewBox="0 0 120 20" aria-hidden="true"><path d="M2 10q10-8 20 0t20 0t20 0t20 0t20 0t16 0" fill="none" stroke="#4A6684" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <h2 style="color:#fff">आज मन में क्या है?</h2>
+    </div>
+    <div class="tiles" id="tiles">
+      <button type="button" class="tile" data-id="astro" aria-pressed="false"><span class="art"><svg class="rings" width="124" height="124" viewBox="0 0 124 124" aria-hidden="true"><circle cx="62" cy="62" r="60" fill="none" stroke="#fff" stroke-opacity=".10"/><circle cx="62" cy="62" r="44" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".08"/></svg><svg class="icon" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="24" stroke-dasharray="2 5"/><path d="M37 17a14 14 0 1 0 10 23 12 12 0 0 1-10-23z"/><path d="M17 14l1.6 3.4 3.4 1.6-3.4 1.6-1.6 3.4-1.6-3.4-3.4-1.6 3.4-1.6z"/><path d="M49 45l1 2.2 2.2 1-2.2 1-1 2.2-1-2.2-2.2-1 2.2-1z"/><path d="M14 44h.01M52 20h.01"/></svg></span><span class="txt"><span class="nm">Astrology</span><span class="hi">ज्योतिष</span></span></button>
+      <button type="button" class="tile" data-id="vastu" aria-pressed="false"><span class="art"><svg class="rings" width="124" height="124" viewBox="0 0 124 124" aria-hidden="true"><circle cx="62" cy="62" r="60" fill="none" stroke="#fff" stroke-opacity=".10"/><circle cx="62" cy="62" r="44" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".08"/></svg><svg class="icon" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="34" r="25" stroke-dasharray="1 4"/><path d="M32 5v5M32 59v-1M5 34h4M59 34h-4"/><path d="M18 35l14-11 14 11"/><path d="M22 32v15h20V32"/><path d="M29 47v-7h6v7"/></svg></span><span class="txt"><span class="nm">Vastu</span><span class="hi">घर और जगह</span></span></button>
+      <button type="button" class="tile" data-id="personal" aria-pressed="false"><span class="art"><svg class="rings" width="124" height="124" viewBox="0 0 124 124" aria-hidden="true"><circle cx="62" cy="62" r="60" fill="none" stroke="#fff" stroke-opacity=".10"/><circle cx="62" cy="62" r="44" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".08"/></svg><svg class="icon" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 58V44c0-7-11-9-13-21"/><path d="M32 44c0-7 11-9 13-21"/><circle cx="19" cy="17" r="5"/><path d="M45 9v3M45 22v3M37 17h3M50 17h3"/><circle cx="45" cy="17" r="3.5"/><path d="M24 58h16" stroke-dasharray="2 4"/></svg></span><span class="txt"><span class="nm">Life Guidance</span><span class="hi">जीवन और career</span></span></button>
+      <button type="button" class="tile" data-id="business" aria-pressed="false"><span class="art"><svg class="rings" width="124" height="124" viewBox="0 0 124 124" aria-hidden="true"><circle cx="62" cy="62" r="60" fill="none" stroke="#fff" stroke-opacity=".10"/><circle cx="62" cy="62" r="44" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".08"/></svg><svg class="icon" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 54h44"/><path d="M17 54V44M27 54V38M37 54V31"/><path d="M47 54V24"/><path d="M47 24c0-7 4-11 11-11 0 7-4 11-11 11z"/><path d="M47 28c0-6-3-9-9-9 0 6 3 9 9 9z"/></svg></span><span class="txt"><span class="nm">Business Growth</span><span class="hi">Business परामर्श</span></span></button>
+      <button type="button" class="tile" data-id="marketing" aria-pressed="false"><span class="art"><svg class="rings" width="124" height="124" viewBox="0 0 124 124" aria-hidden="true"><circle cx="62" cy="62" r="60" fill="none" stroke="#fff" stroke-opacity=".10"/><circle cx="62" cy="62" r="44" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".08"/></svg><svg class="icon" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 28v10h6l17 9V19l-17 9z"/><path d="M18 38l3 11h6l-2-9"/><path d="M42 26a10 10 0 0 1 0 14"/><path d="M48 20a18 18 0 0 1 0 26"/><path d="M54 15a25 25 0 0 1 0 36" stroke-dasharray="2 4"/></svg></span><span class="txt"><span class="nm">Marketing & Ads</span><span class="hi">Campaign strategy</span></span></button>
+      <button type="button" class="tile" data-id="tech" aria-pressed="false"><span class="art"><svg class="rings" width="124" height="124" viewBox="0 0 124 124" aria-hidden="true"><circle cx="62" cy="62" r="60" fill="none" stroke="#fff" stroke-opacity=".10"/><circle cx="62" cy="62" r="44" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".08"/></svg><svg class="icon" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="8"/><circle cx="13" cy="16" r="4.5"/><circle cx="51" cy="16" r="4.5"/><circle cx="13" cy="48" r="4.5"/><circle cx="51" cy="48" r="4.5"/><path d="M17 19l9 7M47 19l-9 7M17 45l9-7M47 45l-9-7"/><path d="M29 32h6M32 29v6"/></svg></span><span class="txt"><span class="nm">Tech & Automation</span><span class="hi">Systems और tools</span></span></button>
+      <button type="button" class="tile" data-id="team" aria-pressed="false"><span class="art"><svg class="rings" width="124" height="124" viewBox="0 0 124 124" aria-hidden="true"><circle cx="62" cy="62" r="60" fill="none" stroke="#fff" stroke-opacity=".10"/><circle cx="62" cy="62" r="44" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".08"/></svg><svg class="icon" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="21" r="6.5"/><circle cx="15" cy="29" r="5"/><circle cx="49" cy="29" r="5"/><path d="M21 51a11 11 0 0 1 22 0"/><path d="M6 50a9 9 0 0 1 14-7M58 50a9 9 0 0 0-14-7"/><path d="M20 58h24" stroke-dasharray="2 4"/></svg></span><span class="txt"><span class="nm">Team & Systems</span><span class="hi">Team और operations</span></span></button>
+    </div>
+    <div class="panel" aria-live="polite">
+      <div class="art">
+        <svg class="bg" viewBox="0 0 320 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><radialGradient id="core" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#8FB8E0" stop-opacity=".35"/><stop offset="100%" stop-color="#8FB8E0" stop-opacity="0"/></radialGradient></defs>
+          <circle cx="160" cy="150" r="150" fill="url(#core)"/>
+          <circle cx="160" cy="150" r="128" fill="none" stroke="#fff" stroke-opacity=".08"/>
+          <circle cx="160" cy="150" r="104" fill="none" stroke="#fff" stroke-opacity=".12" stroke-dasharray="1 7" stroke-linecap="round"/>
+          <circle cx="160" cy="150" r="78" fill="#02040A" fill-opacity=".55" stroke="#fff" stroke-opacity=".12"/>
+        </svg>
+        <span class="big" id="bigIcons">
+          <svg data-id="astro" width="120" height="120" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="24" stroke-dasharray="2 5"/><path d="M37 17a14 14 0 1 0 10 23 12 12 0 0 1-10-23z"/><path d="M17 14l1.6 3.4 3.4 1.6-3.4 1.6-1.6 3.4-1.6-3.4-3.4-1.6 3.4-1.6z"/><path d="M49 45l1 2.2 2.2 1-2.2 1-1 2.2-1-2.2-2.2-1 2.2-1z"/><path d="M14 44h.01M52 20h.01"/></svg>
+          <svg data-id="vastu" width="120" height="120" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="34" r="25" stroke-dasharray="1 4"/><path d="M32 5v5M32 59v-1M5 34h4M59 34h-4"/><path d="M18 35l14-11 14 11"/><path d="M22 32v15h20V32"/><path d="M29 47v-7h6v7"/></svg>
+          <svg data-id="personal" width="120" height="120" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 58V44c0-7-11-9-13-21"/><path d="M32 44c0-7 11-9 13-21"/><circle cx="19" cy="17" r="5"/><path d="M45 9v3M45 22v3M37 17h3M50 17h3"/><circle cx="45" cy="17" r="3.5"/><path d="M24 58h16" stroke-dasharray="2 4"/></svg>
+          <svg data-id="business" width="120" height="120" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 54h44"/><path d="M17 54V44M27 54V38M37 54V31"/><path d="M47 54V24"/><path d="M47 24c0-7 4-11 11-11 0 7-4 11-11 11z"/><path d="M47 28c0-6-3-9-9-9 0 6 3 9 9 9z"/></svg>
+          <svg data-id="marketing" width="120" height="120" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 28v10h6l17 9V19l-17 9z"/><path d="M18 38l3 11h6l-2-9"/><path d="M42 26a10 10 0 0 1 0 14"/><path d="M48 20a18 18 0 0 1 0 26"/><path d="M54 15a25 25 0 0 1 0 36" stroke-dasharray="2 4"/></svg>
+          <svg data-id="tech" width="120" height="120" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="8"/><circle cx="13" cy="16" r="4.5"/><circle cx="51" cy="16" r="4.5"/><circle cx="13" cy="48" r="4.5"/><circle cx="51" cy="48" r="4.5"/><path d="M17 19l9 7M47 19l-9 7M17 45l9-7M47 45l-9-7"/><path d="M29 32h6M32 29v6"/></svg>
+          <svg data-id="team" width="120" height="120" viewBox="0 0 64 64" fill="none" stroke="#DCE9F6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="21" r="6.5"/><circle cx="15" cy="29" r="5"/><circle cx="49" cy="29" r="5"/><path d="M21 51a11 11 0 0 1 22 0"/><path d="M6 50a9 9 0 0 1 14-7M58 50a9 9 0 0 0-14-7"/><path d="M20 58h24" stroke-dasharray="2 4"/></svg>
+        </span>
+      </div>
+      <div class="body">
+        <p class="tag" id="pName"></p>
+        <p class="hook" id="pHook"></p>
+        <div class="chips" id="pFits"></div>
+        <div class="row" style="justify-content:flex-start;align-items:center;gap:14px;padding-top:6px">
+          <a class="btn btn-light" href="#book">बात शुरू करें</a>
+          <span class="fee">Phone ₹500 (25 मिनट) · Meet ₹700 · मुलाक़ात ₹2,000 (55 मिनट)</span>
+        </div>
+        <p class="note" id="pNote"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dawn"><p>हर रात के बाद, सुबह।</p></section>
+
+<section class="how" id="how">
+  <div class="orbit-clip" aria-hidden="true"><div class="orbit light"></div></div>
+  <div class="wrap inner">
+    <h2 style="text-align:center">चार कदम</h2>
+    <div class="steps">
+      <svg class="path" viewBox="0 0 1112 100" preserveAspectRatio="none" aria-hidden="true"><path d="M60 50C200 0 300 100 420 50S640 0 690 50S920 100 1050 50" fill="none" stroke="#C9DBEA" stroke-width="1.6" stroke-dasharray="2 9" stroke-linecap="round"/></svg>
+      <div class="grid">
+        <div class="step"><span class="ic"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M10 9a2 2 0 1 1 2.5 2c-.5.2-.5.6-.5 1"/><path d="M12 14h.01"/></svg></span><h3>सवाल चुनें</h3></div>
+        <div class="step"><span class="ic"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><h3>Phone, Meet या मुलाक़ात चुनें</h3></div>
+        <div class="step"><span class="ic"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M10 15l1.5 1.5L15 13"/></svg></span><h3>समय चुनें और भुगतान करें</h3></div>
+        <div class="step"><span class="ic" style="background-color:#EEF4FA"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18"/><path d="M7 18a5 5 0 0 1 10 0"/><path d="M12 6v3M5 11l2 1M19 11l-2 1M8 21h8"/></svg></span><h3>आगे का रास्ता समझें</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fees tex-grain" id="book">
+  <div class="orbit-clip" aria-hidden="true"><div class="orbit light"></div></div>
+  <div class="wrap inner">
+    <h2 style="text-align:center">बात करने के तीन तरीके</h2>
+    <div class="cards">
+      <div class="card"><div class="art"><svg class="rings" width="130" height="130" viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="72" fill="none" stroke="#DAE6F0"/><circle cx="75" cy="75" r="52" fill="#fff"/></svg><svg class="icon" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/><path d="M15 3a6 6 0 0 1 6 6M15 6.5a2.5 2.5 0 0 1 2.5 2.5"/></svg></div><div class="body"><span class="lbl">Phone</span><span class="price">₹500 <small>/ session</small></span><span class="sub">अधिकतम 25 मिनट · आप जहाँ भी हों</span><span class="spacer"></span><a class="btn btn-accent" data-book="phone" href="#">Phone booking करें</a></div></div>
+      <div class="card"><div class="art"><svg class="rings" width="130" height="130" viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="72" fill="none" stroke="#DAE6F0"/><circle cx="75" cy="75" r="52" fill="#fff"/></svg><svg class="icon" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="2"/><path d="M15.5 10.5l6-3.5v10l-6-3.5z"/></svg></div><div class="body"><span class="lbl">Google Meet</span><span class="price">₹700 <small>/ session</small></span><span class="sub">अधिकतम 55 मिनट · video पर आमने-सामने</span><span class="spacer"></span><a class="btn btn-accent" data-book="meet" href="#">Meet booking करें</a></div></div>
+      <div class="card"><div class="art"><svg class="rings" width="130" height="130" viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="72" fill="none" stroke="#DAE6F0"/><circle cx="75" cy="75" r="52" fill="#fff"/></svg><svg class="icon" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 19a5 5 0 0 1 10 0M11 19a5 5 0 0 1 10 0"/></svg></div><div class="body"><span class="lbl">मुलाक़ात (वैकल्पिक)</span><span class="price">₹2,000 <small>/ session</small></span><span class="sub">55 मिनट · आपका घर या आपकी चुनी कोई निजी जगह · मुख्य रूप से Mumbai</span><span class="spacer"></span><a class="btn btn-accent" data-book="meetup" href="#">मुलाक़ात बुक करें</a></div></div>
+    </div>
+    <div class="info">
+      <div>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>
+        <div><p class="t">शुल्क पूरे session के हिसाब से</p><p class="d">Phone का session 25 मिनट का है, Google Meet और मुलाक़ात का 55 मिनट का। Session के समय के अंदर कितनी भी देर बात हो, शुल्क पूरे session का लगेगा। समय से ज़्यादा होने पर अगले session का पूरा शुल्क लगेगा, चाहे 10 मिनट ही ज़्यादा हों।</p></div>
+      </div>
+      <div>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <div><p class="t">पूरी तरह निजी</p><p class="d">आपकी बात और जानकारी पूरी तरह गोपनीय रहेगी, किसी और को नहीं बताई जाएगी। ज़रूरत हो तो मुलाक़ात आपकी चुनी किसी निजी जगह पर भी हो सकती है।</p></div>
+      </div>
+    </div>
+    <p style="margin:0;text-align:center;font-size:15px;color:var(--muted2)">भुगतान पहले, फिर consultation। Booking की पुष्टि होते ही calendar invite और WhatsApp पर जानकारी मिलेगी।</p>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="orbit-clip" aria-hidden="true"><div class="orbit light"></div></div>
+  <svg class="scene" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <circle cx="720" cy="420" r="300" fill="none" stroke="#E2ECF4"/>
+    <circle cx="720" cy="420" r="230" fill="none" stroke="#DAE6F0" stroke-dasharray="1 8" stroke-linecap="round"/>
+    <circle cx="720" cy="420" r="160" fill="#EEF4FA"/>
+    <g stroke="#DCE7F1" stroke-width="1.3" stroke-linecap="round"><path d="M720 240v-30M590 290l-20-20M850 290l20-20M540 380h-30M900 380h30"/></g>
+    <path d="M0 360C200 330 400 350 560 372S900 340 1100 336S1340 350 1440 340V420H0Z" fill="#EAF2F8"/>
+    <path d="M0 392C240 380 480 396 720 398S1200 382 1440 386V420H0Z" fill="#F4F8FB"/>
+  </svg>
+  <div class="inner">
+    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20c-4 0-8-2-9-6 3-1 6 0 9 3 3-3 6-4 9-3-1 4-5 6-9 6z"/><path d="M12 17c-2-2-3-5-2-9 1 0 2 1 2 1s1-1 2-1c1 4 0 7-2 9z"/></svg>
+    <h2>बात करते हैं।</h2>
+    <div class="row">
+      <a class="btn btn-accent" href="#book">Consultation बुक करें</a>
+      <a class="btn btn-soft" href="https://wa.me/919076037003" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap inner">
+    <div class="top">
+      <p class="serif" style="margin:0;font-size:20px">Shri Arjuna</p>
+      <div class="contact">
+        <a href="https://wa.me/919076037003" target="_blank" rel="noopener">WhatsApp +91 90760 37003</a>
+        <span>मुलाक़ात: मुख्य रूप से Mumbai में</span>
+        <a href="mailto:vishwakarmaarjun128@gmail.com">vishwakarmaarjun128@gmail.com</a>
+      </div>
+    </div>
+    <div class="pills">
+      <span style="font-size:14px;color:var(--muted2)">अन्य व्यवसाय</span>
+      <a class="pill" href="https://www.instagram.com/visualzonefilms/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v14M17 5v14M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>Visual Zone Films</a>
+      <a class="pill" href="https://www.instagram.com/salon.slot/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D6A92" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg>Salon Slot</a>
+    </div>
+    <div class="legal">
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="refund.html">Refund &amp; Cancellation</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="disclaimer">Astrology और Vastu पारंपरिक मार्गदर्शन हैं; इनसे किसी परिणाम की गारंटी नहीं दी जाती। Medical, legal या financial मामलों में किसी योग्य professional की सलाह ज़रूर लें।</p>
+  </div>
+</footer>
+
+<script>
+/* ===== Booking links: paste each Cal ID event link here ===== */
+var BOOKING = {
+  phone:  "https://cal.id/shri-arjunanand/phone-consultation-maximum-25-minutes",
+  meet:   "https://cal.id/shri-arjunanand/google-meet-consultation-maximum-55-minutes",
+  meetup: "https://cal.id/shri-arjunanand/private-consultation-maximum-55-minutes"
+};
+var WA = "https://wa.me/919076037003?text=";
+var LABEL = {phone:"Phone Consultation (₹500)", meet:"Google Meet Consultation (₹700)", meetup:"मुलाक़ात / Private Meeting (₹2,000)"};
+document.querySelectorAll('[data-book]').forEach(function(a){
+  var k=a.getAttribute('data-book');
+  a.href = BOOKING[k] || (WA + encodeURIComponent("नमस्ते Shri Arjuna जी, मुझे " + LABEL[k] + " बुक करना है।"));
+  a.target="_blank"; a.rel="noopener";
+});
+
+var S = [{"id": "astro", "name": "Astrology", "hi": "ज्योतिष", "hook": "किसी ज़रूरी फैसले को लेकर मन में सवाल हैं?", "fits": ["शादी", "Career", "बड़ा बदलाव", "Kundali समझना"], "note": "Astrology पारंपरिक मार्गदर्शन है, कोई पक्की भविष्यवाणी नहीं।"}, {"id": "vastu", "name": "Vastu", "hi": "घर और जगह", "hook": "अपने घर या office के Vastu को लेकर कोई सवाल है?", "fits": ["नया घर", "Office", "दुकान", "बदलाव से पहले"], "note": "Vastu पारंपरिक ज्ञान है; सुझाव आपकी जगह को समझकर दिए जाते हैं, किसी परिणाम की गारंटी के साथ नहीं।"}, {"id": "personal", "name": "Life Guidance", "hi": "जीवन और career", "hook": "ज़िंदगी के किसी मोड़ पर समझ नहीं आ रहा कि आगे क्या करें?", "fits": ["Career direction", "Personal फैसला", "Life planning"], "note": "यह counselling या therapy का विकल्प नहीं है।"}, {"id": "business", "name": "Business Growth", "hi": "Business परामर्श", "hook": "Business बढ़ रहा है, पर क्या system उसे संभाल पा रहा है?", "fits": ["रुकी हुई growth", "नया business", "Priorities"], "note": "यह बातचीत दिशा देती है; revenue बढ़ने की गारंटी नहीं देती।"}, {"id": "marketing", "name": "Marketing & Ads", "hi": "Campaign strategy", "hook": "Marketing पर खर्च तो हो रहा है, पर क्या आपकी बात सही लोगों तक पहुँच रही है?", "fits": ["Ads", "Brand message", "Launch plan"], "note": ""}, {"id": "tech", "name": "Tech & Automation", "hi": "Systems और tools", "hook": "जो काम automate हो सकते हैं, क्या उनमें अब भी घंटों लग रहे हैं?", "fits": ["Workflow", "Automation", "सही software"], "note": ""}, {"id": "team", "name": "Team & Systems", "hi": "Team और operations", "hook": "Team मेहनत कर रही है, फिर भी काम में clarity और ownership नहीं दिखती?", "fits": ["Role clarity", "Accountability", "Reporting"], "note": ""}];
+var tiles = document.querySelectorAll('.tile');
+function pick(id, quiet){
+  var s = S.filter(function(x){return x.id===id})[0];
+  tiles.forEach(function(t){t.setAttribute('aria-pressed', t.dataset.id===id ? 'true':'false')});
+  document.querySelectorAll('#bigIcons svg').forEach(function(sv){sv.classList.toggle('on', sv.dataset.id===id)});
+  document.getElementById('pName').textContent = s.name;
+  document.getElementById('pHook').textContent = '“' + s.hook + '”';
+  var f = document.getElementById('pFits'); f.innerHTML='';
+  s.fits.forEach(function(x){var c=document.createElement('span');c.className='chip';c.textContent=x;f.appendChild(c)});
+  var n = document.getElementById('pNote'); n.textContent = s.note || ''; n.style.display = s.note ? '' : 'none';
+  if(!quiet){var pn=document.querySelector('.panel'); var r=pn.getBoundingClientRect(); var small=window.matchMedia('(max-width: 900px)').matches; if(small || r.top<0 || r.bottom>window.innerHeight){try{pn.scrollIntoView({behavior:'smooth',block:'start'});}catch(e){pn.scrollIntoView(true);} try{if(window.parent!==window){window.location.hash='pName';history.replaceState(null,'',' ');}}catch(e){}}}
+}
+tiles.forEach(function(t){t.addEventListener('click',function(){pick(t.dataset.id)})});
+pick('vastu', true);
+</script>
+</body>
+</html>
